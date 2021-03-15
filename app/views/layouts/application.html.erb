@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BRIQUE</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="hyperspace/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="hyperspace/assets/css/noscript.css" /></noscript>
+  </head>
+
+  <body class="is-preload">
+    <%= render 'layouts/sidebar' %>
+    <%= yield %>
+  </body>
+
+  <footer>
+  <!-- Scripts -->
+      <script src="hyperspace/assets/js/jquery.min.js"></script>
+      <script src="hyperspace/assets/js/jquery.scrollex.min.js"></script>
+      <script src="hyperspace/assets/js/jquery.scrolly.min.js"></script>
+      <script src="hyperspace/assets/js/browser.min.js"></script>
+      <script src="hyperspace/assets/js/breakpoints.min.js"></script>
+      <script src="hyperspace/assets/js/util.js"></script>
+      <script src="hyperspace/assets/js/main.js"></script>
+  </footer>
+</html>

@@ -4,6 +4,22 @@
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+  
+  #mail_form
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000', protocol: 'http' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    user_name: 'valentinkizelev@gmail.com',
+    password: 'mtnjvpqwfutxfazw'
+  }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.cache_classes = false
@@ -46,19 +62,4 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
-
-    #mail_form
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.default_url_options = { host: 'localhost:3000', protocol: 'http' }
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-      address: 'smtp.gmail.com',
-      port: 587,
-      domain: 'gmail.com',
-      authentication: 'plain',
-      enable_starttls_auto: true,
-      user_name: 'valentinkizelev@gmail.com',
-      password: 'mtnjvpqwfutxfazw'
-    }
 end

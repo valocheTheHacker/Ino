@@ -110,18 +110,18 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  
-  config.action_mailer.default_url_options = { :host => 'connectplusse.herokuapp.com' }  
+  config.action_mailer.default_url_options = { :host => 'connectpluss.herokuapp.com' }  
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = false  
   config.action_mailer.default :charset => "utf-8"  
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'connectplusse.herokuapp.com',
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'connectpluss.herokuapp.com',
+    authentication: 'plain',
+    enable_starttls_auto: true,
     user_name: ENV["GMAIL_EMAIL"],
-    password: ENV["GMAIL_PASSWORD"]
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+    password: ENV["GMAIL_PASSWORD"]}
+
 end

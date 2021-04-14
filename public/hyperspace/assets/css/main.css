@@ -71,6 +71,10 @@ input, select, textarea {
 	appearance: none;
 }
 
+.price-columns {
+	float: left;
+}
+
 /* Basic */
 
 	@-ms-viewport {
